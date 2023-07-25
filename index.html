@@ -33,7 +33,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#resevas"><b>Reservas</b></a>
+                <a class="nav-link" href="#reservas"><b>Reservas</b></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#servicos"><b>Serviços</b></a>
@@ -42,7 +42,7 @@
                 <a class="nav-link" href="#cardapio"><b>Cardápio</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#depoimnetos"><b>Depoimentos</b></a>
+                <a class="nav-link" href="#depoimentos"><b>Depoimentos</b></a>
               </li>
             </ul>
             <a class="btn btn-white btn-icon" href="#">
@@ -229,14 +229,14 @@
                   <p class="price-produto text-center">
                     <b>R$ 154,90</b>
                   </p>
-                  <dic class="add-carrinho">
+                  <div class="add-carrinho">
                     <span class="btn-menos"><i class="fas fa-minus"></i></span>
                     <span class="add-numero-itens">0</span>
                     <span class="btn-mais"><i class="fas fa-plus"></i></span>
                     <span class="btn btn-add"
                       ><i class="fa fa-shopping-bag"></i
                     ></span>
-                  </dic>
+                  </div>
                 </div>
               </div>
               <div class="col-3 mb-3">
@@ -548,6 +548,208 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-full" id="modal-carrinho">
+      <div class="m-header">
+        <div class="container">
+          <a href="#" class="btn btn-white btn-sm float-right"> Fechar </a>
+          <div class="etapas">
+            <div class="epata epata1 active">1</div>
+            <div class="epata epata2">2</div>
+            <div class="epata epata3">3</div>
+          </div>
+          <p class="title-carrinho mt-4">
+            <b id="lblTituloEtapa">Seu Carrinho:</b>
+          </p>
+        </div>
+      </div>
+      <div class="m-body">
+        <div class="container">
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="itensCarrinho" class="row mr-0 ml-0">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"
+                  alt="Imagem produto"
+                />
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"><b>Nome do produto</b></p>
+                <p class="price-produto"><b>R$ 149,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="localEntrega" class="row mr-0 ml-0 hidden"></div>
+          <div id="resumoCarrinho" class="row mr-0 ml-0 hidden"></div>
+        </div>
+      </div>
+      <div class="m-footer">
+        <div class="container">
+          <div class="container-total text-right">
+            <p class="mb-0">
+              <span>Subtotal:</span>
+              <span id="lblSubtotal">R$ 95,00</span>
+            </p>
+            <p class="mb-0 texto-entrega">
+              <span><i class="fas fa-motorcycle"></i>Entrega:</span>
+              <span id="lblValorEntrega">+ R$ 5,00</span>
+            </p>
+            <p class="mb-0 texto-total">
+              <span><b>Total:</b></span>
+              <span class="valor-total" id="lblValorTotal"
+                ><b>R$ 100,00</b></span
+              >
+            </p>
+          </div>
+          <a href="#" class="btn btn-yellow float-right" id="btnEtapaPedido">
+            Continuar
+          </a>
+          <a
+            href="#"
+            class="btn btn-yellow float-right hidden"
+            id="btnEtapaEndereco"
+          >
+            Revisar pedido
+          </a>
+          <a
+            href="#"
+            class="btn btn-yellow float-right hidden"
+            id="btnEtapaRemuso"
+          >
+            Enviar pedido
+          </a>
+          <a href="#" class="btn btn-yellow float-right hidden" id="btnVoltar">
+            Voltar
+          </a>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascrip" src="./js/jquery-1.12.4.min.js"></script>
     <script type="text/javascrip" src="./js/modernizr-3.5.0.min.js"></script>
