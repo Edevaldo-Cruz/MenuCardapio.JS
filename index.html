@@ -414,9 +414,9 @@
             Fechar
           </a>
           <div class="etapas">
-            <div class="epata epata1 active">1</div>
-            <div class="epata epata2">2</div>
-            <div class="epata epata3">3</div>
+            <div class="etapa etapa1 active">1</div>
+            <div class="etapa etapa2">2</div>
+            <div class="etapa etapa3">3</div>
           </div>
           <p class="title-carrinho mt-4">
             <b id="lblTituloEtapa">Seu Carrinho:</b>
@@ -522,7 +522,7 @@
               </div>
             </div>
           </div>
-          <div id="resumoCarrinho" class="row mr-0 ml-0">
+          <div id="resumoCarrinho" class="row mr-0 ml-0 hidden">
             <div class="col-12">
               <p class="title-carrinho mt-4">
                 <b>Itens do pedido:</b>
@@ -586,24 +586,28 @@
               >
             </p>
           </div>
-          <a href="#" class="btn btn-yellow float-right" id="btnEtapaPedido">
+          <a
+            class="btn btn-yellow float-right"
+            id="btnEtapaPedido"
+            onclick="cardapio.metodos.carregarEtapa(2)"
+          >
             Continuar
           </a>
           <a
-            href="#"
             class="btn btn-yellow float-right hidden"
             id="btnEtapaEndereco"
+            onclick="cardapio.metodos.carregarEtapa(3)"
           >
             Revisar pedido
           </a>
-          <a
-            href="#"
-            class="btn btn-yellow float-right hidden"
-            id="btnEtapaRemuso"
-          >
+          <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
             Enviar pedido
           </a>
-          <a href="#" class="btn btn-yellow float-right hidden" id="btnVoltar">
+          <a
+            class="btn btn-white mr-3 float-right hidden"
+            id="btnVoltar"
+            onclick="cardapio.metodos.voltarEtapa()"
+          >
             Voltar
           </a>
         </div>

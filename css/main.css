@@ -518,7 +518,7 @@ footer {
   display: flex;
 }
 
-.epata {
+.etapa {
   width: 35px;
   height: 35px;
   background: var(--color-white);
@@ -531,7 +531,7 @@ footer {
   margin-right: 20px;
 }
 
-.epata::before {
+.etapa::before {
   content: "";
   width: 20px;
   background-color: var(--color-separate);
@@ -540,7 +540,7 @@ footer {
   margin-left: 55px;
 }
 
-.epata:last-child::before {
+.etapa:last-child::before {
   content: none;
 }
 
