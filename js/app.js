@@ -7,10 +7,13 @@ var MEU_CARRINHO = [];
 var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 5;
 var MEU_ENDERECO = null;
+var CELULAR_EMPRESA = "5532988634755";
 
 cardapio.eventos = {
   init: () => {
     cardapio.metodos.obterItensCardapio();
+    cardapio.metodos.carregarBotaoReserva();
+    cardapio.metodos.carregarBotaoLigar();
   },
 };
 
@@ -403,6 +406,65 @@ cardapio.metodos = {
     $("#cidadeEndereco").html(
       `${MEU_ENDERECO.cidade}, ${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`
     );
+
+    cardapio.metodos.finalizarPedido();
+  },
+
+  finalizarPedido: () => {
+    if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
+      var texto = "Ola gostaria de fazer um pedido:";
+      texto += `\n*Itens do pedido:* \n\n\${itens}`;
+      texto += "\n*Endereço de entrega:*";
+      texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
+      texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+      texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA)
+        .toFixed(2)
+        .replace(".", ",")}*`;
+
+      var itens = "";
+
+      $.each(MEU_CARRINHO, (i, e) => {
+        itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price
+          .toFixed(2)
+          .replace(".", ",")} \n`;
+
+        if (i + 1 == MEU_CARRINHO.length) {
+          texto = texto.replace(/\${itens}/g, itens);
+
+          //converte a URL
+          let encode = encodeURIComponent(texto);
+          let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+          $("#btnEtapaResumo").attr("href", URL);
+        }
+      });
+    }
+  },
+
+  carregarBotaoReserva: () => {
+    var texto = "Olá! Gostaria de fazer uma *reserva*.";
+    let encode = encodeURIComponent(texto);
+    let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+    $("#btnReserva").attr("href", URL);
+  },
+
+  carregarBotaoLigar: () => {
+    $("#btnLigar").attr("href", `tel:${CELULAR_EMPRESA}`);
+    // $("#btnLigar").text(CELULAR_EMPRESA);
+  },
+
+  abrirDepoimento: (depoimento) => {
+    $("#depoimento-1").addClass("hidden");
+    $("#depoimento-2").addClass("hidden");
+    $("#depoimento-3").addClass("hidden");
+
+    $("#btnDepoimento-1").removeClass("active");
+    $("#btnDepoimento-2").removeClass("active");
+    $("#btnDepoimento-3").removeClass("active");
+
+    $("#depoimento-" + depoimento).removeClass("hidden");
+    $("#btnDepoimento-" + depoimento).addClass("active");
   },
 
   mensagem: (texto, cor = "red", tempo = 3500) => {

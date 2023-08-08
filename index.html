@@ -88,7 +88,11 @@
               </p>
               <div>
                 <a href="" class="btn btn-yellow mt-4 mr-3"> Ver cardápio </a>
-                <a class="btn btn-white btn-icon-left mt-4">
+                <a
+                  href="#"
+                  class="btn btn-white btn-icon-left mt-4"
+                  id="btnLigar"
+                >
                   <span class="icon-left"> <i class="fa fa-phone"></i> </span>
                   (32) 3232-3232</a
                 >
@@ -338,11 +342,24 @@
                 </p>
               </div>
             </div>
-            <a href="#" class="btn btn-sm btn-white btn-social mr-3 active"
+            <a
+              id="btnDepoimento-1"
+              class="btn btn-sm btn-white btn-social mr-3 active"
+              onclick="cardapio.metodos.abrirDepoimento(1)"
               >1</a
             >
-            <a href="#" class="btn btn-sm btn-white btn-social mr-3">2</a>
-            <a href="#" class="btn btn-sm btn-white btn-social">3</a>
+            <a
+              id="btnDepoimento-2"
+              class="btn btn-sm btn-white btn-social mr-3"
+              onclick="cardapio.metodos.abrirDepoimento(2)"
+              >2</a
+            >
+            <a
+              id="btnDepoimento-3"
+              class="btn btn-sm btn-white btn-social"
+              onclick="cardapio.metodos.abrirDepoimento(3)"
+              >3</a
+            >
           </div>
         </div>
       </div>
@@ -363,7 +380,13 @@
                     <br />
                     Reserve sua data e horário de forma simples e rápida.
                   </p>
-                  <a href="" class="btn btn-yellow mt-4">Fazer reverva</a>
+                  <a
+                    href="#"
+                    id="btnReserva"
+                    class="btn btn-yellow mt-4"
+                    target="_blank"
+                    >Fazer reverva</a
+                  >
                 </div>
                 <div class="col-5">
                   <div class="card-reserva">
@@ -563,7 +586,12 @@
           >
             Revisar pedido
           </a>
-          <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
+          <a
+            href="#"
+            class="btn btn-yellow float-right hidden"
+            id="btnEtapaResumo"
+            target="_blank"
+          >
             Enviar pedido
           </a>
           <a
